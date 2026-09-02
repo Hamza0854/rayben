@@ -82,6 +82,10 @@ address { font-style: normal; }
 
 .container { max-width: 1260px; }
 
+.container,
+.container-fluid {
+  --bs-gutter-x: 3rem;
+}
 /* --------------------------------------------------------------------------
    3. Shared type
    -------------------------------------------------------------------------- */
@@ -1031,15 +1035,16 @@ textarea.form-control { min-height: 120px; }
     background: #fff; border-top: 1px solid var(--line);
     box-shadow: 0 -6px 24px rgba(15,43,68,.12);
     padding-bottom: env(safe-area-inset-bottom);
+    border-radius: 14px 14px 0px 0px;
   }
   .actionbar a {
     display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: .2rem; padding: .7rem .4rem; min-height: 64px;
-    font-size: .88rem; font-weight: 500; color: var(--navy);
+    gap: 0rem; padding: .2rem .4rem; min-height: 50px;
+    font-size: .68rem; font-weight: 500; color: var(--navy);
     border-right: 1px solid var(--line);
   }
   .actionbar a:last-child { border-right: 0; }
-  .actionbar a i { font-size: 1.25rem; }
+  .actionbar a i { font-size: 1rem; }
   .actionbar__wa { background: var(--whatsapp); color: #fff !important; }
 
   body { padding-bottom: 64px; }
