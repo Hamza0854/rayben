@@ -728,7 +728,7 @@ textarea.form-control { min-height: 120px; }
 .branch__body address { font-size: 1rem; color: var(--body); margin-bottom: .8rem; line-height: 1.6; }
 .branch__hours {
   font-size: .95rem; color: var(--muted); margin: 0 0 1.3rem;
-  display: flex; gap: .5rem; align-items: flex-start; flex: 1;
+  display: flex; gap: .5rem; align-items: baseline; flex: 1;
 }
 .branch__hours i { color: var(--forest); margin-top: .35rem; }
 .branch__actions { display: flex; gap: .6rem; }
