@@ -922,10 +922,11 @@ textarea.form-control { min-height: 120px; }
    -------------------------------------------------------------------------- */
 .wafloat {
   position: fixed; right: 22px; bottom: 22px; z-index: 1040;
-  display: inline-flex; align-items: center; gap: .6rem;
-  background: var(--whatsapp); color: #fff;
-  padding: .85rem 1.3rem; border-radius: 100px;
-  font-weight: 500; font-size: 1.02rem;
+  display: inline-flex; align-items: center; gap: .6rem;justify-content: center;
+  background: var(--whatsapp); color: #fff; height: 55px;width: 55px;
+  border-radius: 100px; font-family: var(--display); font-weight: 500; font-size: 1rem;
+  box-shadow: 0 14px 32px rgba(37,211,102,.4);
+  transition: transform .3s var(--spring), background-color .25s var(--ease);
   box-shadow: 0 12px 30px rgba(37,211,102,.38);
 }
 .wafloat:hover { color: #fff; background: var(--whatsapp-d); }
@@ -954,7 +955,15 @@ textarea.form-control { min-height: 120px; }
   opacity: 1; transform: none;
   transition: opacity .6s var(--ease), transform .6s var(--ease);
 }
-
+.callfloat {
+  position: fixed; right: 82px; bottom: 22px; z-index: 1040;
+  display: none; align-items: center; gap: .6rem;justify-content: center;
+  background: #fff; color: var(--purple); height: 55px;width: 55px;
+  border-radius: 100px; font-family: var(--display);
+  box-shadow: 0 14px 32px rgba(37,211,102,.4);
+  transition: transform .3s var(--spring), background-color .25s var(--ease);
+}
+.callfloat i { font-size: 1rem; }
 /* --------------------------------------------------------------------------
    28. Responsive
    -------------------------------------------------------------------------- */
@@ -1026,11 +1035,13 @@ textarea.form-control { min-height: 120px; }
   .footer__bottom { flex-direction: column; }
 
   /* sticky action bar takes over from the floating bubble */
-  .wafloat { display: none; }
+  /*.wafloat { display: none; }*/
   .totop { bottom: 88px; right: 16px; width: 42px; height: 42px; }
-
+  .callfloat {
+    display: flex;
+  }
   .actionbar {
-    display: grid; grid-template-columns: repeat(3, 1fr);
+    display: none; grid-template-columns: repeat(3, 1fr);
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 1045;
     background: #fff; border-top: 1px solid var(--line);
     box-shadow: 0 -6px 24px rgba(15,43,68,.12);
